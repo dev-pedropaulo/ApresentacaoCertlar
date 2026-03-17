@@ -275,6 +275,16 @@ document.addEventListener('DOMContentLoaded', () => {
         if (hubScreens[index]) hubScreens[index].classList.add('hub-screen-active');
         if (hubDots[index]) hubDots[index].classList.add('hub-vdot-active');
         if (hubStepLabel) hubStepLabel.textContent = labels[index] || '';
+
+        // Restart cursor animation when Instagram screen appears
+        if (index === 0) {
+            const cursor = document.getElementById('igCursor');
+            if (cursor) {
+                cursor.style.animation = 'none';
+                cursor.offsetHeight; // force reflow
+                cursor.style.animation = '';
+            }
+        }
     };
 
     if (hubScreens.length > 0) {

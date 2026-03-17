@@ -1274,20 +1274,25 @@ ul {
 /* Animated Cursor */
 .ig-cursor {
     position: absolute;
+    top: 65%;
+    left: 55%;
     z-index: 10;
     pointer-events: none;
     opacity: 0;
     filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
-    animation: cursorFlow 10s ease-in-out infinite;
+}
+
+.ig-screen.hub-screen-active .ig-cursor {
+    animation: cursorFlow 3.5s ease-in-out forwards;
 }
 
 @keyframes cursorFlow {
-    0%, 5% { opacity: 0; top: 60%; left: 50%; }
-    10% { opacity: 1; top: 60%; left: 50%; }
-    20%, 28% { opacity: 1; top: 47%; left: 42%; transform: scale(1); }
-    30% { opacity: 1; top: 47%; left: 42%; transform: scale(0.85); }
-    32% { opacity: 1; top: 47%; left: 42%; transform: scale(1); }
-    40%, 100% { opacity: 0; top: 47%; left: 42%; }
+    0% { opacity: 0; top: 65%; left: 55%; }
+    15% { opacity: 1; top: 65%; left: 55%; }
+    45%, 60% { opacity: 1; top: 47%; left: 35%; transform: scale(1); }
+    68% { opacity: 1; top: 47%; left: 35%; transform: scale(0.8); }
+    75% { opacity: 1; top: 47%; left: 35%; transform: scale(1); }
+    90%, 100% { opacity: 0; top: 47%; left: 35%; }
 }
 
 /* Hub Compact Screen adjustments */
