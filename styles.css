@@ -1462,6 +1462,89 @@ ul {
     align-items: start;
 }
 
+.pricing-grid-2col {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 860px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Combo bonus block */
+.combo-label-main {
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--gray-500);
+    margin-bottom: 12px;
+}
+
+.combo-bonus-block {
+    background: linear-gradient(135deg, rgba(255, 107, 53, 0.07), rgba(255, 174, 0, 0.07));
+    border: 1px solid rgba(255, 107, 53, 0.2);
+    border-radius: var(--radius-lg);
+    padding: 16px 18px;
+    margin-bottom: 24px;
+    margin-top: 8px;
+}
+
+.combo-bonus-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--gray-700);
+    margin-bottom: 12px;
+}
+
+.combo-bonus-label strong {
+    color: var(--orange-500);
+}
+
+.combo-bonus-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px dashed rgba(0,0,0,0.07);
+}
+
+.combo-bonus-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.combo-bonus-text {
+    font-size: 0.85rem;
+    color: var(--gray-700);
+}
+
+.combo-bonus-text strong {
+    color: var(--gray-900);
+}
+
+.combo-bonus-value {
+    white-space: nowrap;
+    font-size: 0.82rem;
+    color: var(--gray-400);
+}
+
+.combo-bonus-value s {
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+.combo-bonus-value em {
+    font-style: normal;
+    font-weight: 700;
+    color: #16a34a;
+    background: rgba(22,163,74,0.1);
+    padding: 2px 8px;
+    border-radius: 20px;
+    margin-left: 6px;
+    font-size: 0.78rem;
+}
+
+
 .pricing-card {
     background: var(--white);
     border: 1px solid var(--gray-200);
@@ -2287,10 +2370,12 @@ ul {
     .diagnostic-grid,
     .solution-grid,
     .pricing-grid,
+    .pricing-grid-2col,
     .benefits-grid,
     .about-grid {
         grid-template-columns: 1fr;
     }
+
     
     .pricing-featured {
         transform: none;
